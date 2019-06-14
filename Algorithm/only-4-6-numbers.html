@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //4,6 숫자만
+        function solution(s) {
+            var answer = true;
+            var length = s.length;
+            var count = 0;
+            if (length==4 || length==6) {
+                for(var i=0; i<length; i++) {
+                    var val = s[i] * 1;
+                    if (!(isFinite(val))) {//유한한 숫자아닌경우
+                        return false;
+                    } else {
+                        count++;
+                    }
+                }
+                if (count == length) {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+            return answer;
+        }
+        solution("12dd34d")
+    </script>
+</body>
+</html>
