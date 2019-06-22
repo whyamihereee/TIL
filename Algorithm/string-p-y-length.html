@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //https://programmers.co.kr/learn/courses/30/lessons/12916
+        //문자열 내 p와 y의 개수
+        function solution(s){
+            var answer = true;
+            let txt = s.toLowerCase();
+            let pLeng = 0;
+            let yLeng = 0;
+            for (var i=0; i<txt.length; i++) {
+                if (txt.charAt(i) === 'p') {
+                    pLeng++;
+                } else if (txt.charAt(i) === 'y') {
+                    yLeng++;
+                }
+            }
+            if (pLeng !== yLeng) {
+                answer = false;
+            }
+            return answer;
+        }
+        solution('pPooYyy');
+    </script>
+</body>
+</html>
